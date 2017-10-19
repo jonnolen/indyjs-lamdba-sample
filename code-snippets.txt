@@ -1,13 +1,15 @@
 @@@ Hello World Lambda
-@@@ Lambda Name indyjs-helloworld
-
 exports.handler = (event, context, callback) => {
     callback(null, 'Hello, World!');
 };
 
 @@@ Greet Loudly Lambda
-@@@ Lambda Name indyjs-greetloudly
-
 exports.greetLoudly = (event, context, callback) => {
     callback(null, `Hello, ${event.name || 'Lambda'}!`);
 };
+
+@@@ request integration body mapping template for application/json (API Gateway config)
+#set($inputRoot = $input.path('$'))
+{
+  "name": "$input.params('name')"
+}
