@@ -1,7 +1,7 @@
 let _ = require('lodash');
 
 module.exports = {
- greetLoudly(name) {
+ greet(name) {
     return `HI, ${_.toUpper(name)}!`;
   }
 }

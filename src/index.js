@@ -1,5 +1,5 @@
-let greetLoudly = require('./app/loud-greater').greetLoudly;
+let LoudGreeter = require('./app/loud-greeter');
 
 module.exports.greetLoudly = function greetLoudly(event, context, callback){
-  callback(null, greetLoudly(event.name));
+  callback(null, LoudGreeter.greet(event.name));
 };

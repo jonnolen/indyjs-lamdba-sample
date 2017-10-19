@@ -1,0 +1,13 @@
+@@@ Hello World Lambda
+@@@ Lambda Name indyjs-helloworld
+
+exports.handler = (event, context, callback) => {
+    callback(null, 'Hello, World!');
+};
+
+@@@ Greet Loudly Lambda
+@@@ Lambda Name indyjs-greetloudly
+
+exports.greetLoudly = (event, context, callback) => {
+    callback(null, `Hello, ${event.name || 'Lambda'}!`);
+};
